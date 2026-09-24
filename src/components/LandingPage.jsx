@@ -170,9 +170,9 @@ export default function LandingPage() {
             <div className="feature-icon" style={{ background: 'rgba(255, 59, 129, 0.15)', color: '#ff3b81' }}>
               <Zap size={22} />
             </div>
-            <h3>Frictionless Checkout</h3>
+            <h3>Checkout Cepat Tanpa Ribet</h3>
             <p>
-              Pembeli tidak perlu registrasi atau login akun yang bikin malas. Cukup masukkan email dan WhatsApp, bayar via QRIS, dan akses file langsung terbuka.
+              Pembeli tidak perlu repot daftar akun atau login. Cukup masukkan email dan nomor WhatsApp, bayar via QRIS atau e-wallet, dan file langsung siap diunduh saat itu juga.
             </p>
           </div>
 
@@ -180,9 +180,9 @@ export default function LandingPage() {
             <div className="feature-icon" style={{ background: 'rgba(99, 102, 241, 0.15)', color: '#6366f1' }}>
               <ShieldCheck size={22} />
             </div>
-            <h3>Anti Race-Condition Stock</h3>
+            <h3>Kontrol Kuota & Stok Otomatis</h3>
             <p>
-              Punya kuota lisensi terbatas? Database diamankan dengan sistem <em>Pessimistic Locking</em> sehingga tidak akan pernah terjadi pembelian melebihi kuota.
+              Punya slot lisensi atau kuota promo terbatas? Sistem otomatis mengunci dan memperbarui stok secara akurat sehingga penjualan tidak akan pernah melebihi batas.
             </p>
           </div>
 
@@ -190,9 +190,9 @@ export default function LandingPage() {
             <div className="feature-icon" style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#10b981' }}>
               <DollarSign size={22} />
             </div>
-            <h3>Dompet Seller & Tarik Saldo</h3>
+            <h3>Pencairan Saldo Mudah & Cepat</h3>
             <p>
-              Hasil penjualan tercatat real-time di dashboard. Kamu bisa menarik uang penjualan langsung ke rekening BCA, Mandiri, BRI, BNI, atau GoPay.
+              Pemasukan dari setiap penjualan langsung tercatat rapi secara real-time. Kamu bebas menarik dana penjualan kapan saja ke rekening bank (BCA, Mandiri, BRI, BNI) maupun e-wallet.
             </p>
           </div>
 
@@ -200,9 +200,9 @@ export default function LandingPage() {
             <div className="feature-icon" style={{ background: 'rgba(245, 158, 11, 0.15)', color: '#f59e0b' }}>
               <Lock size={22} />
             </div>
-            <h3>Expiring Download Link</h3>
+            <h3>Link Akses Aman & Terproteksi</h3>
             <p>
-              Tautan download terlindungi dengan token yang otomatis kadaluarsa dalam 24 jam untuk mencegah file digitalmu dibagikan secara ilegal.
+              Master file digitalmu terlindungi dengan tautan lisensi resmi berbatas waktu (24 jam) untuk menjaga karyamu dari pembajakan dan pembagian file secara ilegal.
             </p>
           </div>
         </div>
@@ -210,8 +210,8 @@ export default function LandingPage() {
 
       {/* Call to Action Footer */}
       <section className="landing-cta glass-panel">
-        <h2>Siap Menghasilkan Cuan dari Karya Digitalmu?</h2>
-        <p>Bergabunglah dengan ratusan kreator independen yang menjual produk digital secara profesional.</p>
+        <h2>Siap Menghasilkan dari Karya Digitalmu?</h2>
+        <p>Bergabunglah dengan ratusan kreator independen yang menjual produk digital secara profesional lewat satu link.</p>
         <button
           type="button"
           className="btn-pay-pink"

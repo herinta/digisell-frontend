@@ -185,7 +185,7 @@ function SellerStorefront() {
       <footer className="store-footer">
         <div className="secure-badge">
           <ShieldCheck size={14} color="#10b981" />
-          <span>Didukung oleh Midtrans Sandbox & Spring Boot API (Race-Condition Safe)</span>
+          <span>Transaksi Aman Terenkripsi 256-Bit SSL • Pembayaran QRIS Otomatis & Akses File Instan</span>
         </div>
         <p>© 2026 {username}. Powered by DigiSell Creator Platform.</p>
       </footer>
