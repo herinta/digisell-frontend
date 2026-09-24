@@ -28,6 +28,13 @@ export default function LandingPage() {
     }
   });
 
+  React.useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('view') === 'access' || (params.get('orderId') && params.get('token'))) {
+      navigate(`/access?${params.toString()}`);
+    }
+  }, [navigate]);
+
   const handleClaim = (e) => {
     e.preventDefault();
     setAuthMode('register');

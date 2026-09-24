@@ -201,7 +201,7 @@ function ProductDetailView() {
   const [checkoutProduct, setCheckoutProduct] = useState(null);
   const [successOrder, setSuccessOrder] = useState(null);
 
-  useEffect(() => {
+  const fetchCurrentProduct = () => {
     fetch(`http://localhost:8080/api/products/${productId}`)
       .then((res) => {
         if (!res.ok) throw new Error('Not found');
@@ -212,6 +212,10 @@ function ProductDetailView() {
         const fallback = FALLBACK_PRODUCTS.find((p) => String(p.id) === String(productId));
         setProduct(fallback || FALLBACK_PRODUCTS[0]);
       });
+  };
+
+  useEffect(() => {
+    fetchCurrentProduct();
   }, [productId]);
 
   if (!product) return null;
@@ -235,6 +239,7 @@ function ProductDetailView() {
           onPaymentSuccess={(orderResult) => {
             setCheckoutProduct(null);
             setSuccessOrder(orderResult);
+            fetchCurrentProduct();
           }}
         />
       )}

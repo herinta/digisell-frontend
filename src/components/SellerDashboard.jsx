@@ -255,7 +255,7 @@ export default function SellerDashboard({ onBackToStore }) {
     window.location.href = '/';
   };
 
-  const sellerUsername = currentUser?.username || 'herindev';
+  const sellerUsername = currentUser?.username || dashboardData?.sellerUsername || 'herindev';
   const storeUrl = `${window.location.origin}/${sellerUsername}`;
 
   // If not logged in and checking finished, show Auth Guard

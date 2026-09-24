@@ -38,16 +38,42 @@ export default function SuccessModal({ orderData, onClose }) {
             </div>
           </div>
 
-          <a
-            href={orderData.downloadUrl || '#'}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-download"
-          >
-            <Download size={20} />
-            Unduh File Digital Sekarang
-            <ExternalLink size={16} />
-          </a>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <a
+              href={orderData.downloadUrl || (orderData.downloadToken ? `/access?orderId=${orderData.orderId}&token=${orderData.downloadToken}` : '#')}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-download"
+            >
+              <Download size={20} />
+              Akses & Unduh File Digital
+              <ExternalLink size={16} />
+            </a>
+
+            {orderData.downloadToken && (
+              <a
+                href={`/access?orderId=${orderData.orderId}&token=${orderData.downloadToken}`}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '6px',
+                  fontSize: '0.82rem',
+                  color: '#818cf8',
+                  background: 'rgba(99, 102, 241, 0.08)',
+                  border: '1px solid rgba(99, 102, 241, 0.25)',
+                  borderRadius: '10px',
+                  padding: '10px',
+                  textDecoration: 'none',
+                  fontWeight: 600
+                }}
+              >
+                <span>Buka Portal Akses Berlisensi (Masa Aktif 24 Jam)</span>
+              </a>
+            )}
+          </div>
 
           <button
             type="button"
